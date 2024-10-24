@@ -1,2 +1,4 @@
-public class Registro {
+public class Registro
+{
+    private int tamanhoTabela;
 }
