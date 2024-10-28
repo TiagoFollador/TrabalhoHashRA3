@@ -6,9 +6,10 @@ public class Hash
         this.tamanhoTabela = tamanhoTabela;
     }
 
-    public int funcaoHash(int chave)
+    public int funcaoHashDivisao(int chave)
     {
         return chave >= 0 ? chave % this.tamanhoTabela : (chave * (-1)) % this.tamanhoTabela;
     }
+
 
 }

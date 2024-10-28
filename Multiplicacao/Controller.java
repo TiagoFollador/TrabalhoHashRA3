@@ -18,7 +18,7 @@ public class Controller {
         Random random = new Random(this.seed);
         for (int i = 0; i < tamanhoDoConjuntoDados; i++) {
             int num = random.nextInt();
-            Elemento elemento = new Elemento(hash.funcaoHash(num),num );
+            Elemento elemento = new Elemento(hash.funcaoDivisaoHash(num),num );
             registro.inserirRegistro(elemento);
         }
         return  true;
@@ -33,7 +33,7 @@ public class Controller {
         Random random = new Random(this.seed);
         for (int i = 0; i < 250_001; i++) {
             int num = random.nextInt();
-            switch (num) {
+            switch (i) {
                 case 100:
                     chamarPesquisa(num);
                     break;
@@ -49,6 +49,8 @@ public class Controller {
                 case 250_000:
                     chamarPesquisa(num);
                     break;
+                default:
+                    break;
             }
 
         }
@@ -59,7 +61,7 @@ public class Controller {
     {
 
 
-        registro.pesquisarValor(this.hash.funcaoHash(num), num );
+        registro.pesquisarValor(this.hash.funcaoDivisaoHash(num), num );
     }
 
 

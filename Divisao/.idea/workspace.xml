@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="945dedbe-f23b-42b3-a258-96250009b402" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Divisao.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Multiplicacao/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Elemento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hash.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Registro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/.idea/Divisao.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/Elemento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/Hash.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Divisao/Registro.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Multiplicacao/Elemento.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Multiplicacao/Elemento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Multiplicacao/Hash.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Multiplicacao/Hash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Multiplicacao/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Multiplicacao/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Multiplicacao/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Multiplicacao/Registro.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2nrEKnFX7CZPaaRrI4tEy3rD2OI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/tiago/OneDrive - Grupo Marista/codigos/Estrutura de daddos/TrabalhoHashRA3/App",
+    "settings.editor.selected.configurable": "Groovy compiler"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Divisao" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="945dedbe-f23b-42b3-a258-96250009b402" name="Changes" comment="" />
+      <created>1729722732978</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729722732978</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((Registro)this).registroElementos[7]" custom="Registro" />
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
