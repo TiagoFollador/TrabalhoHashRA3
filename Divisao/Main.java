@@ -2,9 +2,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        insercaoBusca(1000, 1_000_000, 1000);
-        insercaoBusca(1000, 5_000_000, 777);
-        insercaoBusca(1000, 20_000_000, 888);
+//        insercaoBusca(1000, 1_000_000, 1000);
+//        insercaoBusca(1000, 5_000_000, 777);
+//        insercaoBusca(1000, 20_000_000, 888);
+//
+//        insercaoBusca(10000, 1_000_000, 1000);
+//        insercaoBusca(10000, 5_000_000, 777);
+//        insercaoBusca(10000, 20_000_000, 888);
+
+        insercaoBusca(100000, 1_000_000, 1000);
+        insercaoBusca(100000, 5_000_000, 777);
+        insercaoBusca(100000, 20_000_000, 888);
     }
 
     private static void insercaoBusca(int tamanhoLista, int numRegistros, int seed)

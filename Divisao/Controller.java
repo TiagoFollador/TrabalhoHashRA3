@@ -31,12 +31,35 @@ public class Controller {
     public void busca()
     {
         Random random = new Random(this.seed);
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 250_001; i++) {
             int num = random.nextInt();
+            switch (num) {
+                case 100:
+                    chamarPesquisa(num);
+                    break;
+                case 500:
+                    chamarPesquisa(num);
+                    break;
+                case 1_000:
+                    chamarPesquisa(num);
+                    break;
+                case  100_000:
+                    chamarPesquisa(num);
+                    break;
+                case 250_000:
+                    chamarPesquisa(num);
+                    break;
+            }
 
-            registro.pesquisarValor(this.hash.funcaoHash(num), num );
         }
 
+    }
+
+    private void chamarPesquisa(int num)
+    {
+
+
+        registro.pesquisarValor(this.hash.funcaoHash(num), num );
     }
 
 

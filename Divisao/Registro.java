@@ -74,7 +74,7 @@ public class Registro {
                 Elemento elementoProcurado = encontrarValorNaListaEncadeada(this.registroElementos[i], valor);
                 if (elementoProcurado.getValor() == valor) {
                     System.out.println("Chave Encontrada: " + elementoProcurado.getChave() +
-                            " Chave Buscado " + chave);
+                            " Chave Buscada " + chave);
                     System.out.println("Numero Encontrado" + elementoProcurado.getValor() +
                             " Numero Buscado " + valor);
                 }
@@ -92,6 +92,6 @@ public class Registro {
         } else if (e.getProximo() == null) {
             return null;
         }
-        return percorrerListaEncadeada(e.getProximo());
+        return encontrarValorNaListaEncadeada(e.getProximo(), valor);
     }
 }
