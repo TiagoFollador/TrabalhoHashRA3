@@ -8,6 +8,7 @@ public class Hash
 
     public int funcaoHash(int chave)
     {
-        return chave % this.tamanhoTabela;
+        return chave >= 0 ? chave % this.tamanhoTabela : (chave * (-1)) % this.tamanhoTabela;
     }
+
 }

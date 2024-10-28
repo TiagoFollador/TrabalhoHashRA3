@@ -1,26 +1,43 @@
+import java.util.Random;
+
 public class Controller {
     private Hash hash;
     private Registro registro;
+    private int seed;
 
 
-    public Controller(int tamanhoTabela) {
+    public Controller(int tamanhoTabela, int seed) {
         this.hash = new Hash(tamanhoTabela);
-        this.registro = new Registro(tamanhoTabela);
+        this.registro = new  Registro(tamanhoTabela);
+        this.seed = seed;
     }
 
-    private Elemento criarElemento(int valor)
+
+    public boolean popularRegistro(int tamanhoDoConjuntoDados)
     {
-        int chave = hash.funcaoHash(valor);
-        Elemento e = new Elemento(chave, valor);
-        return e;
+        Random random = new Random(this.seed);
+        for (int i = 0; i < tamanhoDoConjuntoDados; i++) {
+            int num = random.nextInt();
+            Elemento elemento = new Elemento(hash.funcaoHash(num),num );
+            registro.inserirRegistro(elemento);
+        }
+        return  true;
     }
 
-    private boolean inserirRegistro(Elemento e)
+    public void exibirLista(){
+        registro.exibirLista();
+    }
+
+    public void busca()
     {
-        return this.registro.inserirRegistro(e);
-    }
+        Random random = new Random(this.seed);
+        for (int i = 0; i < 5; i++) {
+            int num = random.nextInt();
 
-//    public boolean popularRegistro()
+            registro.pesquisarValor(this.hash.funcaoHash(num), num );
+        }
+
+    }
 
 
 }
