@@ -1,29 +1,27 @@
 import java.util.Random;
 
-public class ControllerDobramento {
+public class ControllerDivisao {
     private Hash hash;
     private Registro registro;
     private int seed;
 
 
-    public ControllerDobramento(int tamanhoTabela, int seed) {
+    public ControllerDivisao(int tamanhoTabela, int seed) {
         this.hash = new Hash(tamanhoTabela);
         this.registro = new  Registro(tamanhoTabela);
         this.seed = seed;
     }
-
     public int getColisoes()
     {
         return  this.registro.getColisoes();
     }
-
 
     public boolean popularRegistro(int tamanhoDoConjuntoDados)
     {
         Random random = new Random(this.seed);
         for (int i = 0; i < tamanhoDoConjuntoDados; i++) {
             int num = random.nextInt();
-            Elemento elemento = new Elemento(hash.funcaoHashDobramento(num),num );
+            Elemento elemento = new Elemento(hash.funcaoHashDivisao(num),num );
             registro.inserirRegistro(elemento);
         }
         return  true;
@@ -66,7 +64,7 @@ public class ControllerDobramento {
     {
 
 
-        registro.pesquisarValor(this.hash.funcaoHashDobramento(num), num );
+        registro.pesquisarValor(this.hash.funcaoHashDivisao(num), num );
     }
 
 
