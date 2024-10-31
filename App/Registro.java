@@ -1,12 +1,12 @@
 public class Registro {
-    private Elemento[] registroElementos;
+    private Fila[] registroElementos;
     private int tamanhoAtual;
     private int tamanhoMaximo;
     private int colisoes;
 
     public Registro(int tamanhoLista)
     {
-        this.registroElementos = new Elemento[tamanhoLista];
+        this.registroElementos = new Fila[tamanhoLista];
         this.tamanhoAtual = 0;
         this.colisoes = 0;
         this.tamanhoMaximo = tamanhoLista;
@@ -16,15 +16,17 @@ public class Registro {
         return colisoes;
     }
 
-    public void inserirRegistro(Elemento elemento)
+    public boolean inserirRegistro(Elemento elemento)
     {
-
         if (encontrarChavesIguais(elemento)) {
-            return;
+            return true;
         } else if (tamanhoAtual < tamanhoMaximo) {
-            this.registroElementos[this.tamanhoAtual] = elemento;
+            Fila fila = new Fila(elemento);
+            this.registroElementos[this.tamanhoAtual] = fila;
             tamanhoAtual++;
+            return true;
         }
+        return false;
     }
 
 
@@ -32,8 +34,9 @@ public class Registro {
     private boolean encontrarChavesIguais(Elemento elemento)
     {
         for (int i = 0; i < tamanhoAtual; i++) {
-            if (registroElementos[i].getChave() == elemento.getChave()) {
+            if (registroElementos[i].getBegin().getChave() == elemento.getChave()) {
                 Elemento lastElemento = findLastElemento(registroElementos[i]);
+                registroElementos[i].setEnd(elemento);
                 lastElemento.setProximo(elemento);
                 this.colisoes++;
                 return true;
@@ -42,39 +45,30 @@ public class Registro {
         return false;
     }
 
-    private Elemento findLastElemento(Elemento e)
+//    private Elemento findLastElemento(Elemento e)
+//    {
+//        if (e.getProximo() == null) {
+//            return e;
+//        } else {
+//            return findLastElemento(e.getProximo());
+//        }
+//    }
+    private Elemento findLastElemento(Fila fila)
     {
-        if (e.getProximo() == null) {
-            return e;
+        if (fila.getBegin().getProximo() == null) {
+            return fila.getBegin();
         } else {
-            return findLastElemento(e.getProximo());
+            return fila.getEnd();
         }
     }
 
-    public void exibirLista()
-    {
-        for (int i = 0; i < this.tamanhoAtual; i++) {
-            percorrerListaEncadeada(this.registroElementos[i]);
-            System.out.println();
-        }
-    }
-
-    private Elemento percorrerListaEncadeada(Elemento e)
-    {
-        if (e.getProximo() == null) {
-            System.out.print(" Valor: " + e.getValor());
-            return e;
-        }
-        System.out.print(" Valor: " + e.getValor() + " -> ");
-        return percorrerListaEncadeada(e.getProximo());
-    }
 
     public boolean pesquisarValor(int chave, int valor)
     {
         boolean findValue = false;
         for (int i = 0; i < this.tamanhoAtual; i++) {
-            if (this.registroElementos[i].getChave() == chave) {
-                Elemento elementoProcurado = encontrarValorNaListaEncadeada(this.registroElementos[i], valor);
+            if (this.registroElementos[i].getBegin().getChave() == chave) {
+                Elemento elementoProcurado = encontrarValorNaListaEncadeada(this.registroElementos[i].getBegin(), valor);
                 if (elementoProcurado.getValor() == valor) {
                     System.out.printf("Chave Encontrada: %08d -- Chave Buscada %08d\n", elementoProcurado.getChave(), chave);
                     System.out.printf("Numero Encontrado: %08d -- Numero Buscado %08d\n", elementoProcurado.getValor(), valor);

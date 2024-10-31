@@ -21,6 +21,7 @@ public class ControllerDobramento {
     public boolean popularRegistro(int tamanhoDoConjuntoDados)
     {
         Random random = new Random(this.seed);
+        int t = 0;
         for (int i = 0; i < tamanhoDoConjuntoDados; i++) {
             int num = random.nextInt();
             Elemento elemento = new Elemento(hash.funcaoHashDobramento(num),num );
@@ -29,14 +30,11 @@ public class ControllerDobramento {
         return  true;
     }
 
-    public void exibirLista(){
-        registro.exibirLista();
-    }
 
     public void busca()
     {
         Random random = new Random(this.seed);
-        for (int i = 0; i < 250_001; i++) {
+        for (int i = 0; i < 999_001; i++) {
             int num = random.nextInt();
             switch (i) {
                 case 100:
@@ -52,6 +50,9 @@ public class ControllerDobramento {
                     chamarPesquisa(num);
                     break;
                 case 250_000:
+                    chamarPesquisa(num);
+                    break;
+                case 999_000:
                     chamarPesquisa(num);
                     break;
                 default:

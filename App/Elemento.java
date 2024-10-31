@@ -25,4 +25,10 @@ public class Elemento
     public void setProximo(Elemento proximo) {
         this.proximo = proximo;
     }
+
+    public void setChave(int chave) {
+        this.chave = chave;
+    }
+
+
 }
