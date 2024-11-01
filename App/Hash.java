@@ -19,10 +19,11 @@ public class Hash
     public int funcaoHashDobramento(int chave)
     {
         int numBits = 10;
-        int parte1 = chave >> numBits;
-        int parte2 = chave & this.tamanhoTabela - 1;
+        int chaveValida = chave >= 0 ? chave : (chave * (-1));
+        int parte1 = chaveValida >> numBits;
+        int parte2 = chaveValida % this.tamanhoTabela;
 
-        return chave >= 0 ? parte1 ^ parte2 : ((chave * (-1)) >> numBits) ^ ((chave * (-1)) & this.tamanhoTabela - 1);
+        return (parte1 ^ parte2) % this.tamanhoTabela ;
     }
 
 

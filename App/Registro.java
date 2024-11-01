@@ -66,9 +66,11 @@ public class Registro {
     public boolean pesquisarValor(int chave, int valor)
     {
         boolean findValue = false;
+        int qttBusca = 0;
         for (int i = 0; i < this.tamanhoAtual; i++) {
+            qttBusca++;
             if (this.registroElementos[i].getBegin().getChave() == chave) {
-                Elemento elementoProcurado = encontrarValorNaListaEncadeada(this.registroElementos[i].getBegin(), valor);
+                Elemento elementoProcurado = encontrarValorNaListaEncadeada(this.registroElementos[i].getBegin(), valor, qttBusca);
                 if (elementoProcurado.getValor() == valor) {
                     System.out.printf("Chave Encontrada: %08d -- Chave Buscada %08d\n", elementoProcurado.getChave(), chave);
                     System.out.printf("Numero Encontrado: %08d -- Numero Buscado %08d\n", elementoProcurado.getValor(), valor);
@@ -81,11 +83,14 @@ public class Registro {
         return findValue;
     }
 
-    private Elemento encontrarValorNaListaEncadeada(Elemento e, int valor)
+    private Elemento encontrarValorNaListaEncadeada(Elemento e, int valor, int qttBusca)
     {
+
         if (e.getValor() == valor) {
+            qttBusca++;
             return e;
         } else if (e.getProximo() == null) {
+            qttBusca++;
             return null;
         }
         return encontrarValorNaListaEncadeada(e.getProximo(), valor);
