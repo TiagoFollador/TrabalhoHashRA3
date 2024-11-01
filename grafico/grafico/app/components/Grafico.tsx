@@ -43,11 +43,23 @@ const chartData = [
 ]
 
 const resultadosData = [
-    {funcName: "Divisao" , runTimeMs: 1400, colisoes: 10000},
-    {funcName: "Multiplicacao" , runTimeMs: 14000, colisoes: 1000},
-    {funcName: "Dobramento" , runTimeMs: 140000, colisoes: 1},
+    { funcName: "Divisao", runTimeMs: 340563, colisoes: 19990000, qttBuscas: 9380 },
+    { funcName: "Divisao", runTimeMs: 340563, colisoes: 19990000, qttBuscas: 9380 },
+    { funcName: "Divisao", runTimeMs: 340563, colisoes: 19990000, qttBuscas: 9380 },
 ]
 
+const color = (functionName: string) => {
+    console.log(functionName === "Divisao");
+    
+  switch (functionName) {
+    case "Divisao":
+      return "bg-red-800"
+    case "Multiplicacao":
+      return "bg-blue-800"
+    case "Dobramento":
+      return "bg-green-800"
+    }
+}
 
 const chartConfig = {
   desktop: {
@@ -65,7 +77,7 @@ const chartConfig = {
 
 export function Grafico({data = resultadosData, qttElementos, arraySize, }: graficoProps) {
   return (
-    <Card className="h-[50vh] w-[30vw]">
+    <Card className="h-[60vh] w-[30vw]">
       <CardHeader>
         <CardTitle>Grafico de tempo - {qttElementos} mi Elementos</CardTitle>
         <CardDescription> Tamanho do array: {arraySize} </CardDescription>
@@ -89,9 +101,9 @@ export function Grafico({data = resultadosData, qttElementos, arraySize, }: graf
             />
             <ChartTooltip
               cursor={false}
-              content={<ChartTooltipContent hideLabel />}
+              content={<ChartTooltipContent indicator="line" />}
             />
-            <Bar dataKey="runTimeMs" fill="var(--color-desktop)" radius={8}>
+            <Bar dataKey="runTimeMs" fill = "green" radius={8}>
               <LabelList
                 position="top"
                 offset={12}
@@ -107,7 +119,7 @@ export function Grafico({data = resultadosData, qttElementos, arraySize, }: graf
         {data.map((item, key) => (
             <div>
               {item.funcName}:
-                - Numero de colisoes {"->"} {item.colisoes} - Numero de buscas {"->"} {item.qttBuscas}
+                - Numero de colisoes {"->"} {item.colisoes} - Numero medio de buscas {"->"} {item.qttBuscas}
             </div>
         ))}
       </CardFooter>
