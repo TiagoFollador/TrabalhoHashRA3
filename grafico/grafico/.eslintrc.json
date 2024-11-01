@@ -1,3 +1,6 @@
 {
-  
+  "extends": ["eslint:recommended", "next"],
+  "rules": {
+  "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }]
+}
 }
