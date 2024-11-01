@@ -1,7 +1,6 @@
 "use client"
 
-import { TrendingUp } from "lucide-react"
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts"
+import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
 
 import {
   Card,
@@ -33,14 +32,6 @@ interface graficoProps {
     arraySize: number
 }
 
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-]
 
 const resultadosData = [
     { funcName: "Divisao", runTimeMs: 340563, colisoes: 19990000, qttBuscas: 9380 },
@@ -48,18 +39,6 @@ const resultadosData = [
     { funcName: "Divisao", runTimeMs: 340563, colisoes: 19990000, qttBuscas: 9380 },
 ]
 
-const color = (functionName: string) => {
-    console.log(functionName === "Divisao");
-    
-  switch (functionName) {
-    case "Divisao":
-      return "bg-red-800"
-    case "Multiplicacao":
-      return "bg-blue-800"
-    case "Dobramento":
-      return "bg-green-800"
-    }
-}
 
 const chartConfig = {
   desktop: {
@@ -116,7 +95,7 @@ export function Grafico({data = resultadosData, qttElementos, arraySize, }: graf
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
 
-        {data.map((item, key) => (
+        {data.map((item) => (
             <div>
               {item.funcName}:
                 - Numero de colisoes {"->"} {item.colisoes} - Numero medio de buscas {"->"} {item.qttBuscas}
