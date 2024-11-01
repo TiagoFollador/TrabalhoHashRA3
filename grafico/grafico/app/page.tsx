@@ -9,7 +9,7 @@ export default function Home() {
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <div>
-          Desenvolvido por 
+          Desenvolvido por Luiz Mathias Rivabem Filho, Rafaela Vecchi, Tiago de Brito Follador
         </div>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"

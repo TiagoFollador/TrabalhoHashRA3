@@ -77,9 +77,9 @@ const chartConfig = {
 
 export function Grafico({data = resultadosData, qttElementos, arraySize, }: graficoProps) {
   return (
-    <Card className="h-[60vh] w-[30vw]">
+    <Card className="h-[60vh] w-[35vw]">
       <CardHeader>
-        <CardTitle>Grafico de tempo - {qttElementos} mi Elementos</CardTitle>
+        <CardTitle>Grafico de tempo (Ms) - {qttElementos} mi Elementos</CardTitle>
         <CardDescription> Tamanho do array: {arraySize} </CardDescription>
       </CardHeader>
       <CardContent>
